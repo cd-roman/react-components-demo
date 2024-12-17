@@ -36,7 +36,7 @@ export const ProductList = () => {
       setIsLoading(true);
       try {
         // Simulate network delay
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        await new Promise((resolve) => setTimeout(resolve, 1200));
         setProducts([
           {
             name: "Product 1",
