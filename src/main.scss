@@ -1,0 +1,246 @@
+@import "./styles//variables";
+@import "./styles//mixins";
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%; /* Respect user's default */
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+//////////////////
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.2;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #303030;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+button {
+  border-radius: $border-radius;
+  border: 1px solid transparent;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f0f0f0;
+  }
+  button:hover {
+    background-color: #e7e7e7;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  button:hover {
+    background-color: #323232; // Dark theme hover color
+  }
+}
+
+// Base styles
+#root {
+  max-width: 1440px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+  }
+}
+
+body {
+  font-family: $font-stack;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 600px) {
+    padding: 16px;
+  }
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+}
+
+.light-text {
+  color: #f5f5f5;
+}
+
+.chart-type {
+  text-align: left;
+  margin: 48px 10px;
+}
+
+.chart-title {
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-align: left;
+  margin: 40px 10px 10px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+// Card component
+.card {
+  background-color: white;
+  border-radius: $border-radius;
+  @include box-shadow(0, 2px, 5px, rgba(0, 0, 0, 0.1));
+
+  &.dark {
+    background-color: #323232;
+  }
+}
+
+footer {
+  margin-top: auto;
+  width: 100%;
+  background-color: #3d3d3d;
+  color: #fff;
+  padding: 2rem;
+
+  p {
+    margin: 1rem 0;
+    font-weight: bold;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      color: $react-blue;
+    }
+  }
+}
+
+/* Remove hover effect on ToastContainer close button */
+.Toastify__close-button {
+  &:hover {
+    background-color: transparent;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-bottom: none;
+
+  .sidebar-and-content {
+    display: flex;
+    padding: 0;
+    flex: 1;
+    min-height: 100vh;
+  }
+}

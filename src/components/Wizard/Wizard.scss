@@ -1,0 +1,94 @@
+.wizard-container {
+  padding: 3rem 0;
+
+  .wizard-title {
+    margin-bottom: 2rem;
+  }
+}
+
+.wizard-progress-indicator {
+  margin-bottom: 2rem;
+}
+
+.wizard {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  input {
+    margin: 0 0 2rem 0;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 1px solid #00000022;
+    border-radius: 4px;
+  }
+}
+
+.wizard-buttons-container {
+  display: inline;
+  align-items: center;
+  max-width: 200px;
+  margin: 0 auto;
+
+  button {
+    margin: 0 0.5rem;
+    outline: none;
+    &:focus {
+      outline: none;
+    }
+    &:focus-visible {
+      outline: #3b82f6 auto;
+    }
+  }
+}
+
+.subscribe-checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  margin: 2rem 2rem 3rem;
+
+  input[type="checkbox"] {
+    /* Hide the default checkbox */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    border: 2px solid #000;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+
+    /* Custom checkbox styling */
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 12px;
+      height: 12px;
+      background-color: #000;
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 0.2s ease-in-out;
+      border-radius: 2px;
+    }
+
+    /* Checked state */
+    &:checked::before {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+}
+
+.submit-message {
+  margin: 2rem 0;
+}

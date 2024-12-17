@@ -1,0 +1,52 @@
+.get-started-container {
+  border: 1px solid #e0e0e0;
+
+  h1 {
+    margin: 4rem 0 2rem;
+  }
+}
+
+.page-title {
+  font-size: 2.4rem;
+}
+
+.page-description {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 1.2rem 3.5rem;
+  line-height: 1.8rem;
+  max-width: 80%;
+}
+
+.test-button {
+  margin: 0.5rem 0 4rem;
+
+  &:focus {
+    outline: none;
+  }
+  &:focus-visible {
+    outline: #3b82f6 auto;
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .get-started-container {
+    h1 {
+      margin: 2.5rem 0 0;
+    }
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .page-description {
+    font-size: 1rem;
+    margin: 1rem 2.5rem;
+    line-height: 1.5rem;
+  }
+}

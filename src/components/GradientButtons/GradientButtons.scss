@@ -1,0 +1,49 @@
+.gradient-buttons-container {
+  padding: 10rem 0;
+}
+
+.gradient-button {
+  margin: 3rem 1rem 0;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+
+  // Create the gradient border effect
+  background-image: linear-gradient(to right, #000, #000),
+    linear-gradient(to right, #ff6600, #ffcc00); // Outer gradient border
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+
+  &:hover {
+    color: #ffcc00;
+  }
+
+  &:focus {
+    outline: none;
+  }
+  &:focus-visible {
+    outline: #3b82f6 auto;
+  }
+
+  &.multicolor {
+    background-image: linear-gradient(to right, #000, #000),
+      linear-gradient(to right, #3b82f6, #c3feff, #f38ec2);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+
+  // Optional icon styles inside the button
+  .icon {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+  }
+}
