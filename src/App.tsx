@@ -10,6 +10,7 @@ import { ProductList } from "./components/ProductList";
 import { CleaningCalculator } from "./components/CleaningCalculator";
 import { Wizard } from "./components/Wizard";
 import { ColumnChart } from "./components/ColumnChart";
+import { ColumnChartAnnual } from "./components/ColumnChartAnnual";
 import { BarChartHorizontal } from "./components/BarChartHorizontal";
 import { DonutChart } from "./components/DonutChart";
 import { PieChart } from "./components/PieChart";
@@ -138,6 +139,14 @@ function App() {
                   element={
                     <RouteTransition>
                       <PieChart />
+                    </RouteTransition>
+                  }
+                />
+                <Route
+                  path="/column-chart-annual"
+                  element={
+                    <RouteTransition>
+                      <ColumnChartAnnual />
                     </RouteTransition>
                   }
                 />

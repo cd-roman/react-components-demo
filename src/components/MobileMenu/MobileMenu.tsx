@@ -21,6 +21,7 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
             { to: "/bar-chart-horizontal", text: "Bar Chart Horizontal" },
             { to: "/cleaning", text: "Cleaning Calculator" },
             { to: "/column-chart", text: "Column Chart" },
+            { to: "/column-chart-annual", text: "Column Chart Annual" },
             { to: "/counter", text: "Counter" },
             { to: "/donut-chart", text: "Donut Chart" },
             { to: "/buttons", text: "Gradient Buttons" },
