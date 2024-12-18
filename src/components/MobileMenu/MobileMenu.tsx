@@ -19,9 +19,9 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
           {[
             { to: "/", text: "Get started" },
             { to: "/bar-chart-horizontal", text: "Bar Chart Horizontal" },
-            { to: "/bar-chart-vertical", text: "Bar Chart Vertical" },
-            { to: "/counter", text: "Counter" },
             { to: "/cleaning", text: "Cleaning Calculator" },
+            { to: "/column-chart", text: "Column Chart" },
+            { to: "/counter", text: "Counter" },
             { to: "/donut-chart", text: "Donut Chart" },
             { to: "/buttons", text: "Gradient Buttons" },
             { to: "/pie-chart", text: "Pie Chart" },

@@ -1,7 +1,7 @@
 import Chart from "react-apexcharts";
 import { ApexOptions } from "apexcharts";
 
-export const BarChartVertical = () => {
+export const ColumnChart = () => {
   const options: ApexOptions = {
     chart: {
       type: "bar",

@@ -9,7 +9,7 @@ import { GradientButtons } from "./components/GradientButtons";
 import { ProductList } from "./components/ProductList";
 import { CleaningCalculator } from "./components/CleaningCalculator";
 import { Wizard } from "./components/Wizard";
-import { BarChartVertical } from "./components/BarChartVertical";
+import { ColumnChart } from "./components/ColumnChart";
 import { BarChartHorizontal } from "./components/BarChartHorizontal";
 import { DonutChart } from "./components/DonutChart";
 import { PieChart } from "./components/PieChart";
@@ -110,10 +110,10 @@ function App() {
                   }
                 />
                 <Route
-                  path="/bar-chart-vertical"
+                  path="/column-chart"
                   element={
                     <RouteTransition>
-                      <BarChartVertical />
+                      <ColumnChart />
                     </RouteTransition>
                   }
                 />
