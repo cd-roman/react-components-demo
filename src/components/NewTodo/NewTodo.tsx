@@ -13,6 +13,7 @@ export const NewTodo: React.FC<NewTodoProps> = (props) => {
     const enteredText = textInputRef.current!.value;
     props.onAddTodo(enteredText);
     textInputRef.current!.value = "";
+    textInputRef.current?.blur();
   };
 
   return (
