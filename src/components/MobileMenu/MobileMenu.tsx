@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 import "./MobileMenu.scss";
 
 interface MobileMenuProps {
@@ -8,9 +9,27 @@ interface MobileMenuProps {
 
 export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
   const location = useLocation();
+  const [menuOpen, setMenuOpen] = useState(isOpen);
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, [menuOpen]);
+
+  useEffect(() => {
+    setMenuOpen(isOpen);
+  }, [isOpen]);
 
   return (
-    <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
+    <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
       <button className="close-button" onClick={onClose}>
         ×
       </button>
