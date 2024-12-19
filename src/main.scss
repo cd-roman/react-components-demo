@@ -23,7 +23,6 @@ body.no-scroll {
   overflow: hidden;
   position: fixed;
   width: 100%;
-  /* Remove height: 100% to prevent jumping */
 }
 
 h1,
@@ -244,11 +243,25 @@ footer {
   }
 }
 
+.page-wrapper {
+  position: relative;
+  left: 0;
+  transition: left 0.3s ease-in-out;
+
+  &.menu-open {
+    left: -100%;
+  }
+}
+
 .app-layout {
   display: flex;
   flex-direction: column;
   border: 1px solid #ddd;
   border-bottom: none;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  width: 100%;
+  // Remove the transform properties we added before
 
   .sidebar-and-content {
     display: flex;

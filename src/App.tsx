@@ -40,145 +40,147 @@ function App() {
       {showSplash && <SplashScreen onComplete={() => setShowSplash(false)} />}
       <Router>
         <ToastContainer />
-        <div className="app-layout">
-          <button
-            className="hamburger-button"
-            onClick={() => setIsMobileMenuOpen(true)}
-          >
-            ☰
-          </button>
-          <MobileMenu
-            isOpen={isMobileMenuOpen}
-            onClose={() => setIsMobileMenuOpen(false)}
-          />
-          <div className="sidebar-and-content">
-            <Sidebar />
-            <main className="main-content">
-              <LogoContainer />
-              <Routes>
-                <Route
-                  path="/"
-                  element={
-                    <RouteTransition>
-                      <GetStarted />
-                    </RouteTransition>
-                  }
-                />
-                <Route
-                  path="/counter"
-                  element={
-                    <RouteTransition>
-                      <Counter />
-                    </RouteTransition>
-                  }
-                />
-                <Route
-                  path="/todos"
-                  element={
-                    <RouteTransition>
-                      <TodoList />
-                    </RouteTransition>
-                  }
-                />
-                <Route
-                  path="/buttons"
-                  element={
-                    <RouteTransition>
-                      <GradientButtons />
-                    </RouteTransition>
-                  }
-                />
-                <Route
-                  path="/products"
-                  element={
-                    <RouteTransition>
-                      <ProductList />
-                    </RouteTransition>
-                  }
-                />
-                <Route
-                  path="/cleaning"
-                  element={
-                    <RouteTransition>
-                      <CleaningCalculator />
-                    </RouteTransition>
-                  }
-                />
-                <Route
-                  path="/wizard"
-                  element={
-                    <RouteTransition>
-                      <Wizard />
-                    </RouteTransition>
-                  }
-                />
-                <Route
-                  path="/column-chart"
-                  element={
-                    <RouteTransition>
-                      <ColumnChart />
-                    </RouteTransition>
-                  }
-                />
-                <Route
-                  path="/bar-chart-horizontal"
-                  element={
-                    <RouteTransition>
-                      <BarChartHorizontal />
-                    </RouteTransition>
-                  }
-                />
-                <Route
-                  path="/donut-chart"
-                  element={
-                    <RouteTransition>
-                      <DonutChart />
-                    </RouteTransition>
-                  }
-                />
-                <Route
-                  path="/pie-chart"
-                  element={
-                    <RouteTransition>
-                      <PieChart />
-                    </RouteTransition>
-                  }
-                />
-                <Route
-                  path="/column-chart-annual"
-                  element={
-                    <RouteTransition>
-                      <ColumnChartAnnual />
-                    </RouteTransition>
-                  }
-                />
-                <Route
-                  path="/pie-chart-monochrome"
-                  element={
-                    <RouteTransition>
-                      <PieChartMonochrome />
-                    </RouteTransition>
-                  }
-                />
-                <Route
-                  path="/circle-charts"
-                  element={
-                    <RouteTransition>
-                      <CircleCharts />
-                    </RouteTransition>
-                  }
-                />
-              </Routes>
-            </main>
+        <div className={`page-wrapper ${isMobileMenuOpen ? "menu-open" : ""}`}>
+          <div className="app-layout">
+            <button
+              className="hamburger-button"
+              onClick={() => setIsMobileMenuOpen(true)}
+            >
+              ☰
+            </button>
+            <MobileMenu
+              isOpen={isMobileMenuOpen}
+              onClose={() => setIsMobileMenuOpen(false)}
+            />
+            <div className="sidebar-and-content">
+              <Sidebar />
+              <main className="main-content">
+                <LogoContainer />
+                <Routes>
+                  <Route
+                    path="/"
+                    element={
+                      <RouteTransition>
+                        <GetStarted />
+                      </RouteTransition>
+                    }
+                  />
+                  <Route
+                    path="/counter"
+                    element={
+                      <RouteTransition>
+                        <Counter />
+                      </RouteTransition>
+                    }
+                  />
+                  <Route
+                    path="/todos"
+                    element={
+                      <RouteTransition>
+                        <TodoList />
+                      </RouteTransition>
+                    }
+                  />
+                  <Route
+                    path="/buttons"
+                    element={
+                      <RouteTransition>
+                        <GradientButtons />
+                      </RouteTransition>
+                    }
+                  />
+                  <Route
+                    path="/products"
+                    element={
+                      <RouteTransition>
+                        <ProductList />
+                      </RouteTransition>
+                    }
+                  />
+                  <Route
+                    path="/cleaning"
+                    element={
+                      <RouteTransition>
+                        <CleaningCalculator />
+                      </RouteTransition>
+                    }
+                  />
+                  <Route
+                    path="/wizard"
+                    element={
+                      <RouteTransition>
+                        <Wizard />
+                      </RouteTransition>
+                    }
+                  />
+                  <Route
+                    path="/column-chart"
+                    element={
+                      <RouteTransition>
+                        <ColumnChart />
+                      </RouteTransition>
+                    }
+                  />
+                  <Route
+                    path="/bar-chart-horizontal"
+                    element={
+                      <RouteTransition>
+                        <BarChartHorizontal />
+                      </RouteTransition>
+                    }
+                  />
+                  <Route
+                    path="/donut-chart"
+                    element={
+                      <RouteTransition>
+                        <DonutChart />
+                      </RouteTransition>
+                    }
+                  />
+                  <Route
+                    path="/pie-chart"
+                    element={
+                      <RouteTransition>
+                        <PieChart />
+                      </RouteTransition>
+                    }
+                  />
+                  <Route
+                    path="/column-chart-annual"
+                    element={
+                      <RouteTransition>
+                        <ColumnChartAnnual />
+                      </RouteTransition>
+                    }
+                  />
+                  <Route
+                    path="/pie-chart-monochrome"
+                    element={
+                      <RouteTransition>
+                        <PieChartMonochrome />
+                      </RouteTransition>
+                    }
+                  />
+                  <Route
+                    path="/circle-charts"
+                    element={
+                      <RouteTransition>
+                        <CircleCharts />
+                      </RouteTransition>
+                    }
+                  />
+                </Routes>
+              </main>
+            </div>
+            <Footer
+              links={[
+                {
+                  title: "GitHub",
+                  url: "https://github.com/cd-roman/react-components-demo",
+                },
+              ]}
+            />
           </div>
-          <Footer
-            links={[
-              {
-                title: "GitHub",
-                url: "https://github.com/cd-roman/react-components-demo",
-              },
-            ]}
-          />
         </div>
       </Router>
     </>
