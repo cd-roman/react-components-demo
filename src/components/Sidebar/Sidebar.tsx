@@ -10,6 +10,7 @@ export const Sidebar = () => {
         {[
           { to: "/", text: "Get started" },
           { to: "/bar-chart-horizontal", text: "Bar Chart Horizontal" },
+          { to: "/circle-charts", text: "Circle Charts" },
           { to: "/cleaning", text: "Cleaning Calculator" },
           { to: "/column-chart", text: "Column Chart" },
           { to: "/column-chart-annual", text: "Column Chart Annual" },

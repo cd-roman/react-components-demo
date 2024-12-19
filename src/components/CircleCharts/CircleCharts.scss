@@ -1,0 +1,11 @@
+.circle-charts-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.circle-chart {
+  width: 300px;
+}

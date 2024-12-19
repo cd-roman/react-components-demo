@@ -15,6 +15,7 @@ import { BarChartHorizontal } from "./components/BarChartHorizontal";
 import { DonutChart } from "./components/DonutChart";
 import { PieChart } from "./components/PieChart";
 import { PieChartMonochrome } from "./components/PieChartMonochrome";
+import { CircleCharts } from "./components/CircleCharts";
 import { Footer } from "./components/Footer";
 import { RouteTransition } from "./utils/RouteTransition";
 import { MobileMenu } from "./components/MobileMenu";
@@ -156,6 +157,14 @@ function App() {
                   element={
                     <RouteTransition>
                       <PieChartMonochrome />
+                    </RouteTransition>
+                  }
+                />
+                <Route
+                  path="/circle-charts"
+                  element={
+                    <RouteTransition>
+                      <CircleCharts />
                     </RouteTransition>
                   }
                 />
