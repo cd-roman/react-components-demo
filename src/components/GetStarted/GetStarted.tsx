@@ -19,7 +19,7 @@ export const GetStarted = () => {
         as a toast notification system when clicking the buttons. Try it out!
       </p>
       <Button
-        className="test-button"
+        className="get-started-btn"
         onClick={() => navigate("/bar-chart-horizontal")}
       >
         Start exploring

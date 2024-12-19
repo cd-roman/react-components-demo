@@ -9,11 +9,16 @@
   button {
     margin: 1rem 0.5rem;
     outline: none;
+
     &:focus {
       outline: none;
     }
     &:focus-visible {
       outline: #3b82f6 auto;
+    }
+
+    &:active {
+      transform: translateY(2px);
     }
   }
 }

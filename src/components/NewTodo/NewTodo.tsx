@@ -22,7 +22,9 @@ export const NewTodo: React.FC<NewTodoProps> = (props) => {
         <label htmlFor="todo-text">Todo item text</label>
         <input type="text" id="todo-text" ref={textInputRef} required />
       </div>
-      <button type="submit">Add Todo</button>
+      <button className="add-todo-btn" type="submit">
+        Add Todo
+      </button>
     </form>
   );
 };
