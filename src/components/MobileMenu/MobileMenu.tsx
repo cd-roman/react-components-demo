@@ -26,6 +26,7 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
             { to: "/donut-chart", text: "Donut Chart" },
             { to: "/buttons", text: "Gradient Buttons" },
             { to: "/pie-chart", text: "Pie Chart" },
+            { to: "/pie-chart-monochrome", text: "Pie Chart Monochrome" },
             { to: "/products", text: "Product List" },
             { to: "/todos", text: "Todo List" },
             { to: "/wizard", text: "Wizard" },

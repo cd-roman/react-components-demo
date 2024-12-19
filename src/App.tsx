@@ -14,6 +14,7 @@ import { ColumnChartAnnual } from "./components/ColumnChartAnnual";
 import { BarChartHorizontal } from "./components/BarChartHorizontal";
 import { DonutChart } from "./components/DonutChart";
 import { PieChart } from "./components/PieChart";
+import { PieChartMonochrome } from "./components/PieChartMonochrome";
 import { Footer } from "./components/Footer";
 import { RouteTransition } from "./utils/RouteTransition";
 import { MobileMenu } from "./components/MobileMenu";
@@ -150,10 +151,25 @@ function App() {
                     </RouteTransition>
                   }
                 />
+                <Route
+                  path="/pie-chart-monochrome"
+                  element={
+                    <RouteTransition>
+                      <PieChartMonochrome />
+                    </RouteTransition>
+                  }
+                />
               </Routes>
             </main>
           </div>
-          <Footer links={[{ title: "GitHub", url: "https://github.com" }]} />
+          <Footer
+            links={[
+              {
+                title: "GitHub",
+                url: "https://github.com/cd-roman/react-components-demo",
+              },
+            ]}
+          />
         </div>
       </Router>
     </>
