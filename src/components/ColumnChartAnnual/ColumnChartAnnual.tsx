@@ -32,6 +32,7 @@ export const ColumnChartAnnual = () => {
         style: {
           fontSize: "14px",
         },
+        rotateAlways: false,
       },
     },
     yaxis: {
@@ -76,6 +77,24 @@ export const ColumnChartAnnual = () => {
         options: {
           dataLabels: {
             enabled: false,
+          },
+          xaxis: {
+            labels: {
+              rotateAlways: true,
+              rotate: -45,
+            },
+          },
+        },
+      },
+      {
+        breakpoint: 450,
+        options: {
+          xaxis: {
+            labels: {
+              style: {
+                fontSize: "12px",
+              },
+            },
           },
         },
       },
