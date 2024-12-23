@@ -60,7 +60,7 @@ export const ColumnChartAnnual = () => {
     colors: ["#118B50"],
     plotOptions: {
       bar: {
-        borderRadius: 12,
+        borderRadius: 4,
         horizontal: false,
       },
     },
