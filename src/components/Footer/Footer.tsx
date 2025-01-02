@@ -1,3 +1,5 @@
+import { getCurrentYear } from "../../utils/dateUtils";
+
 type FooterLink = {
   title: string;
   url: string;
@@ -10,12 +12,12 @@ interface Footer {
 export const Footer = ({ links }: Footer) => {
   return (
     <footer>
-      <p>Footer</p>
       {links.map((link) => (
         <a key={link.title} href={link.url}>
           {link.title}
         </a>
       ))}
+      <p>© {getCurrentYear()} Front-End Components Demo</p>
     </footer>
   );
 };

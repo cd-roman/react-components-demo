@@ -175,7 +175,7 @@ function App() {
             <Footer
               links={[
                 {
-                  title: "GitHub",
+                  title: "Link to code",
                   url: "https://github.com/cd-roman/react-components-demo",
                 },
               ]}

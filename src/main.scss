@@ -220,12 +220,12 @@ footer {
 
   p {
     margin: 1rem 0;
-    font-weight: bold;
   }
 
   a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
 
     &:hover {
       color: $react-blue;
