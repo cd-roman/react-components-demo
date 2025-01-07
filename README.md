@@ -1,30 +1,8 @@
-# React + TypeScript + Vite
+# UI Components Showcase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web app built with React, TypeScript, SCSS, GSAP, and Vite, demonstrating a variety of reusable UI components, including bar, donut, and column charts, a to-do list, a wizard, and some others I've built for various projects.
 
-Currently, two official plugins are available:
+It also includes additional features such as toast notifications implemented with React-Tostify and a splash screen, providing a comprehensive view of modern UI elements abilities in action.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Use this command to run the project locally:
+`npm run dev`
