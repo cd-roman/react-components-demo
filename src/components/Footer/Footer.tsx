@@ -17,7 +17,7 @@ export const Footer = ({ links }: Footer) => {
           {link.title}
         </a>
       ))}
-      <p>© {getCurrentYear()} Front-End Components Demo</p>
+      <p>© {getCurrentYear()} UI Components Showcase</p>
     </footer>
   );
 };
