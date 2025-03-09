@@ -13,7 +13,7 @@ export const CircleCharts = React.memo(() => {
       plotOptions: {
         radialBar: {
           hollow: {
-            size: "70%",
+            size: "75%",
           },
           track: {
             background: "#eeeeee",
@@ -48,13 +48,23 @@ export const CircleCharts = React.memo(() => {
     },
     {
       name: "Project B",
-      data: [85],
+      data: [80],
       color: "#4ECDC4",
     },
     {
       name: "Project C",
-      data: [95],
+      data: [90],
       color: "#45B7D1",
+    },
+    {
+      name: "Project D",
+      data: [85],
+      color: "#0081A7",
+    },
+    {
+      name: "Project E",
+      data: [70],
+      color: "#d16416",
     },
   ];
 
