@@ -13,6 +13,7 @@ import { ColumnChart } from "./components/ColumnChart";
 import { ColumnChartAnnual } from "./components/ColumnChartAnnual";
 import { BarChartHorizontal } from "./components/BarChartHorizontal";
 import { DonutChart } from "./components/DonutChart";
+import { FeatureVoteWidget } from "./components/FeatureVoteWidget";
 import { PieChart } from "./components/PieChart";
 import { PieChartMonochrome } from "./components/PieChartMonochrome";
 import { CircleCharts } from "./components/CircleCharts";
@@ -166,6 +167,14 @@ function App() {
                     element={
                       <RouteTransition>
                         <CircleCharts />
+                      </RouteTransition>
+                    }
+                  />
+                  <Route
+                    path="/feature-vote"
+                    element={
+                      <RouteTransition>
+                        <FeatureVoteWidget />
                       </RouteTransition>
                     }
                   />

@@ -44,6 +44,7 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
             { to: "/column-chart-annual", text: "Column Chart Annual" },
             { to: "/counter", text: "Counter" },
             { to: "/donut-chart", text: "Donut Chart" },
+            { to: "/feature-vote", text: "Feature Vote" },
             { to: "/buttons", text: "Gradient Buttons" },
             { to: "/pie-chart", text: "Pie Chart" },
             { to: "/pie-chart-monochrome", text: "Pie Chart Monochrome" },
