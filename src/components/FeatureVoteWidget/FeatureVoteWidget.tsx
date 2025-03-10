@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { toast } from "react-toastify";
 import "./FeatureVoteWidget.scss";
 
 interface Feature {
@@ -29,59 +30,67 @@ export const FeatureVoteWidget: React.FC<FeatureVoteWidgetProps> = ({
 }) => {
   const [votes, setVotes] = useState<Record<string, VoteCount>>(() => {
     const initialVotes: Record<string, VoteCount> = {};
-    features.forEach(feature => {
+    features.forEach((feature) => {
       initialVotes[feature.id] = { upvotes: 0, downvotes: 0 };
     });
     return initialVotes;
   });
 
-  const handleVote = (id: string, type: 'upvotes' | 'downvotes') => {
-    setVotes(prevVotes => ({
+  const handleVote = (id: string, type: "upvotes" | "downvotes") => {
+    setVotes((prevVotes) => ({
       ...prevVotes,
       [id]: {
         ...prevVotes[id],
-        [type]: (prevVotes[id]?.[type] || 0) + 1
-      }
+        [type]: (prevVotes[id]?.[type] || 0) + 1,
+      },
     }));
   };
+
+  const notify = (message: string) => toast(message);
 
   return (
     <section className="feature-vote-widget">
       <h1 className="feature-vote-widget__title">{title}</h1>
       <div className="feature-vote-widget__container">
         {features.map((feature) => (
-          <article 
-            key={feature.id} 
+          <article
+            key={feature.id}
             className="feature-vote-widget__card"
             data-testid={`aspect-${feature.id}`}
           >
             <h2>{feature.name}</h2>
             <div className="feature-vote-widget__actions">
-              <button 
+              <button
                 className="feature-vote-widget__button feature-vote-widget__button--upvote"
-                onClick={() => handleVote(feature.id, 'upvotes')} 
+                onClick={() => {
+                  handleVote(feature.id, "upvotes");
+                  notify(`You have upvoted ${feature.name}`);
+                }}
                 data-testid={`upvote-btn-${feature.id}`}
                 aria-label={`Upvote ${feature.name}`}
               >
                 👍 Upvote
               </button>
-              <button 
+              <button
                 className="feature-vote-widget__button feature-vote-widget__button--downvote"
-                onClick={() => handleVote(feature.id, 'downvotes')} 
+                onClick={() => {
+                  handleVote(feature.id, "downvotes");
+                  notify(`You have downvoted ${feature.name}`);
+                }}
                 data-testid={`downvote-btn-${feature.id}`}
                 aria-label={`Downvote ${feature.name}`}
               >
                 👎 Downvote
               </button>
             </div>
-            <p 
-              className="feature-vote-widget__count" 
+            <p
+              className="feature-vote-widget__count"
               data-testid={`upvote-count-${feature.id}`}
             >
               Upvotes: <strong>{votes[feature.id]?.upvotes || 0}</strong>
             </p>
-            <p 
-              className="feature-vote-widget__count" 
+            <p
+              className="feature-vote-widget__count"
               data-testid={`downvote-count-${feature.id}`}
             >
               Downvotes: <strong>{votes[feature.id]?.downvotes || 0}</strong>
