@@ -17,6 +17,7 @@ import { FeatureVoteWidget } from "./components/FeatureVoteWidget";
 import { PieChart } from "./components/PieChart";
 import { PieChartMonochrome } from "./components/PieChartMonochrome";
 import { CircleCharts } from "./components/CircleCharts";
+import { NotFound } from "./components/NotFound";
 import { Footer } from "./components/Footer";
 import { RouteTransition } from "./utils/RouteTransition";
 import { MobileMenu } from "./components/MobileMenu";
@@ -175,6 +176,15 @@ function App() {
                     element={
                       <RouteTransition>
                         <FeatureVoteWidget />
+                      </RouteTransition>
+                    }
+                  />
+                  {/* This is the catch-all route that displays the 404 page */}
+                  <Route
+                    path="*"
+                    element={
+                      <RouteTransition>
+                        <NotFound />
                       </RouteTransition>
                     }
                   />
