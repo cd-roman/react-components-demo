@@ -9,8 +9,8 @@ export const Counter = () => {
     <div className="card">
       <div className="counter">
         <h2>Counter: {count}</h2>
-        <Button onClick={() => setCount((prev) => prev - 1)}>Decrease</Button>
         <Button onClick={() => setCount((count) => count + 1)}>Increase</Button>
+        <Button onClick={() => setCount((prev) => prev - 1)}>Decrease</Button>
         <Button onClick={() => setCount(0)}>Reset count</Button>
         <p className="counter-description">
           The Counter component is a basic stateful component that allows users
