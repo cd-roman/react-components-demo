@@ -1,44 +1,41 @@
-import React, { useMemo } from "react";
+import React from "react";
 import Chart from "react-apexcharts";
 import { ApexOptions } from "apexcharts";
 import "./CircleCharts.scss";
 
 export const CircleCharts = React.memo(() => {
-  const commonOptions: ApexOptions = useMemo(
-    () => ({
-      chart: {
-        height: 350,
-        type: "radialBar",
-      },
-      plotOptions: {
-        radialBar: {
-          hollow: {
-            size: "75%",
-          },
-          track: {
-            background: "#eeeeee",
-            opacity: 1,
-          },
-          dataLabels: {
+  const commonOptions: ApexOptions = {
+    chart: {
+      height: 350,
+      type: "radialBar",
+    },
+    plotOptions: {
+      radialBar: {
+        hollow: {
+          size: "75%",
+        },
+        track: {
+          background: "#eeeeee",
+          opacity: 1,
+        },
+        dataLabels: {
+          show: true,
+          name: {
             show: true,
-            name: {
-              show: true,
-              fontSize: "16px",
-              offsetY: -10,
-            },
-            value: {
-              show: true,
-              fontSize: "30px",
-              formatter: function (val) {
-                return val + "%";
-              },
+            fontSize: "16px",
+            offsetY: -10,
+          },
+          value: {
+            show: true,
+            fontSize: "30px",
+            formatter: function (val) {
+              return val + "%";
             },
           },
         },
       },
-    }),
-    []
-  );
+    },
+  };
 
   const projects = [
     {
