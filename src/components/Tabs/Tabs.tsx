@@ -83,14 +83,14 @@ func main() {
     <div className="tabs-container">
       <h2 className="section-title">{title}</h2>
       <p className="tabs-description">
-        The interactive tabs component lets users switch between different content sections without scrolling. In this example, each tab shows how to perform basic sorting logic in four popular programming languages: 
+        The interactive tabs component lets users switch between different
+        content sections without scrolling. In this example, each tab shows how
+        to perform basic sorting logic in four popular programming languages:
         <br />
         JavaScript, TypeScript, Python, and Go.
       </p>
-      <p>
-        
-      </p>
-      
+      <p></p>
+
       <div className="tabs-wrapper">
         <div className="tabs-header">
           {tabs.map((tab) => (
@@ -105,7 +105,7 @@ func main() {
             </button>
           ))}
         </div>
-        
+
         <div className="tabs-content" role="tabpanel">
           <div className="code-block">
             <div className="code-header">
@@ -123,17 +123,23 @@ func main() {
                 style={vscDarkPlus}
                 customStyle={{
                   margin: 0,
-                  padding: '1.5rem',
-                  background: '#1e1e1e',
-                  fontSize: '0.875rem',
-                  lineHeight: '1.6',
-                  textAlign: 'left',
+                  padding: "1.5rem",
+                  background: "#1e1e1e",
+                  fontSize: "0.875rem",
+                  lineHeight: "1.6",
+                  textAlign: "left",
+                  overflowX: "auto",
+                  whiteSpace: "pre",
+                  wordWrap: "normal",
                 }}
                 codeTagProps={{
                   style: {
-                    fontFamily: "'Fira Code', 'Monaco', 'Courier New', monospace",
-                  }
+                    fontFamily:
+                      "'Fira Code', 'Monaco', 'Courier New', monospace",
+                    whiteSpace: "pre",
+                  },
                 }}
+                wrapLongLines={false}
               >
                 {activeTabData.code}
               </SyntaxHighlighter>
