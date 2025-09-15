@@ -17,6 +17,7 @@ import { FeatureVoteWidget } from "./components/FeatureVoteWidget";
 import { PieChart } from "./components/PieChart";
 import { PieChartMonochrome } from "./components/PieChartMonochrome";
 import { CircleCharts } from "./components/CircleCharts";
+import { Tabs } from "./components/Tabs";
 import { NotFound } from "./components/NotFound";
 import { Footer } from "./components/Footer";
 import { RouteTransition } from "./utils/RouteTransition";
@@ -176,6 +177,14 @@ function App() {
                     element={
                       <RouteTransition>
                         <FeatureVoteWidget />
+                      </RouteTransition>
+                    }
+                  />
+                  <Route
+                    path="/tabs"
+                    element={
+                      <RouteTransition>
+                        <Tabs />
                       </RouteTransition>
                     }
                   />

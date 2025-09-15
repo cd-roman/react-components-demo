@@ -1,0 +1,216 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.tabs-container {
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 0;  
+
+  .tabs-description {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 2rem 3.5rem;
+    line-height: 1.8rem;
+    max-width: 80%;
+    color: #717171;
+  }
+}
+
+.tabs-wrapper {
+  background: white;
+  border-radius: $border-radius;
+  @include box-shadow(0, 2px, 10px, rgba(0, 0, 0, 0.1));
+  overflow: hidden;
+}
+
+.tabs-header {
+  display: flex;
+  background: #f8f9fa;
+  padding: 0;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+
+  .tab-button {
+    background: none;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #6c757d;
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+    @include transition(all, 0.3s);
+    border-bottom: 3px solid transparent;
+    border-radius: 0;
+
+    &:hover {
+      background-color: #e9ecef;
+      color: #495057;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $primary-color;
+      outline-offset: -2px;
+    }
+
+    &.active {
+      background-color: white;
+      color: $primary-color;
+      border-bottom-color: $primary-color;
+      
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: $primary-color;
+      }
+    }
+  }
+}
+
+.tabs-content {
+  background: white;
+  min-height: 200px;
+}
+
+.code-block {
+  .code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2d3748;
+    color: white;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.875rem;
+    font-family: 'Courier New', monospace;
+
+    .language-label {
+      font-weight: 600;
+      text-transform: capitalize;
+      color: #4fd1c7;
+    }
+
+    .filename {
+      color: #a0aec0;
+      font-style: italic;
+    }
+  }
+
+  .code-content {
+    // Remove previous styles as SyntaxHighlighter handles them
+    margin: 0;
+    text-align: left;
+    
+    // Override SyntaxHighlighter styles for better integration
+    pre {
+      margin: 0 !important;
+      border-radius: 0 !important;
+      
+      code {
+        font-family: 'Fira Code', 'Monaco', 'Courier New', monospace !important;
+        text-align: left !important;
+      }
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .tabs-container {
+    margin: 1rem 0;
+
+    .tabs-description {
+      font-size: 1rem;
+      margin: 1rem 0 2rem;
+      padding: 0 1rem;
+    }
+  }
+
+  .tabs-header {
+    .tab-button {
+      padding: 0.875rem 1rem;
+      font-size: 0.8rem;
+      min-width: 120px;
+    }
+  }
+
+  .code-block {
+    .code-header {
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+      flex-direction: column;
+      gap: 0.25rem;
+      text-align: center;
+    }
+
+    .code-content {
+      pre {
+        padding: 1rem !important;
+        font-size: 0.8rem !important;
+        line-height: 1.5 !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .tabs-header {
+    .tab-button {
+      padding: 0.75rem 0.875rem;
+      font-size: 0.75rem;
+      min-width: 100px;
+    }
+  }
+
+  .code-block {
+    .code-content {
+      pre {
+        padding: 0.875rem !important;
+        font-size: 0.75rem !important;
+      }
+    }
+  }
+}
+
+// Dark mode support
+@media (prefers-color-scheme: dark) {
+  .tabs-wrapper {
+    background: #2d3748;
+  }
+
+  .tabs-header {
+    background: #4a5568;
+    border-bottom-color: #2d3748;
+
+    .tab-button {
+      color: #a0aec0;
+
+      &:hover {
+        background-color: #2d3748;
+        color: #e2e8f0;
+      }
+
+      &.active {
+        background-color: #2d3748;
+        color: $react-blue;
+        border-bottom-color: $react-blue;
+
+        &::after {
+          background: $react-blue;
+        }
+      }
+    }
+  }
+
+  .tabs-content {
+    background: #2d3748;
+  }
+}

@@ -21,6 +21,7 @@ export const Sidebar = () => {
           { to: "/pie-chart", text: "Pie Chart" },
           { to: "/pie-chart-monochrome", text: "Pie Chart Monochrome" },
           { to: "/products", text: "Product List" },
+          { to: "/tabs", text: "Tabs" },
           { to: "/todos", text: "Todo List" },
           { to: "/wizard", text: "Wizard" },
         ].map(({ to, text }) => (
