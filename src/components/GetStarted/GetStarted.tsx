@@ -1,4 +1,4 @@
-import { Button } from "../Button";
+import { Button } from "../ui/Button";
 import { useNavigate } from "react-router-dom";
 import "./GetStarted.scss";
 

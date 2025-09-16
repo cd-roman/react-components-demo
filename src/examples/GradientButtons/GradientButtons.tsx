@@ -1,4 +1,4 @@
-import { Button } from "../Button/Button";
+import { Button } from "../../components/ui/Button";
 import { toast } from "react-toastify";
 import "./GradientButtons.scss";
 
