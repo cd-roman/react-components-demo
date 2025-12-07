@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@use "../../styles/variables" as *;
 
 .feature-vote-widget {
   margin: 20px auto 0;
@@ -55,7 +55,7 @@
       color: #2a6931;
 
       &:hover {
-        background-color: darken(#d6f7d9, 5%);
+        background-color: color-mix(in srgb, #d6f7d9 95%, black);
       }
 
       &:active {
@@ -68,7 +68,7 @@
       color: #d32f2f;
 
       &:hover {
-        background-color: darken(#f9e5e3, 5%);
+        background-color: color-mix(in srgb, #f9e5e3 95%, black);
       }
 
       &:active {
