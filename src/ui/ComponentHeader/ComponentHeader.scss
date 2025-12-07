@@ -1,0 +1,96 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.component-header {
+  margin-bottom: 3rem;
+  
+  .component-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 1.5rem 0;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  .component-description {
+    // background: #f8f9fa;
+    // padding: 1.25rem;
+    // border-radius: $border-radius;
+    margin-bottom: 1rem;
+    // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    
+    .description-section {
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
+      font-size: 0.95rem;
+      color: #555;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    
+    .description-label {
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+  }
+
+  .header-divider {
+    margin: 1.5rem 0;
+    
+    hr {
+      border: none;
+      border-top: 1px solid #e0e0e0;
+      margin: 0;
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .component-header {
+    margin-bottom: 1.5rem;
+    
+    .component-title {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+    
+    .component-description {
+      padding: 1rem;
+      
+      .description-section {
+        margin-bottom: 0.5rem;
+        font-size: 0.875rem;
+      }
+      
+      .description-label {
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .component-header {
+    .component-title {
+      font-size: 1.5rem;
+    }
+    
+    .component-description {
+      padding: 0.875rem;
+      border-left-width: 3px;
+      
+      .description-section {
+        font-size: 0.8rem;
+      }
+      
+      .description-label {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

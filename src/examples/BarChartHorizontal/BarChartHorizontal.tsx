@@ -1,5 +1,6 @@
 import Chart from "react-apexcharts";
 import { ApexOptions } from "apexcharts";
+import { ComponentHeader } from "../../ui/ComponentHeader";
 
 export const BarChartHorizontal = () => {
   const options: ApexOptions = {
@@ -85,10 +86,18 @@ export const BarChartHorizontal = () => {
 
   return (
     <>
-      <h2 className="chart-type">Bar chart horizontal</h2>
+      <ComponentHeader
+        title="Bar Chart Horizontal"
+        purpose="Ideal for ranking, comparisons, or popularity metrics in dashboards."
+        technical="Built with ApexCharts. Accepts dynamic data arrays. Responsive width, label auto-adjust."
+        inAction="Showing top 5 programming languages by popularity."
+      />
+      {/* <h2 className="chart-type">Bar chart horizontal</h2> */}
+
       <h3 className="chart-title">
         Top 5 Most Popular Programming Languages in 2024
       </h3>
+
       <div className="w-full">
         <Chart
           options={options}
